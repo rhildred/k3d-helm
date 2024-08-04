@@ -6,9 +6,17 @@ TLDR;
 ```
 k3d cluster create local-k8s
 
+```
+
+To delete a cluster:
+
+```
+k3d cluster delete local-k8s
+```
+
 kubectl get nodes
 
-kubectl -n default apply -f admin-user.yml
+kubectl -n default apply -f kube/admin-user.yml
 
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard
 
