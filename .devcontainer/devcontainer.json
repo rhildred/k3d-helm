@@ -19,7 +19,8 @@
                 "ritwickdey.LiveServer",
                 "ms-python.vscode-pylance",
                 "ms-python.python",
-                "ms-python.debugpy"
+                "ms-python.debugpy",
+                "REditorSupport.r"
             ]
         }
     }
