@@ -13,6 +13,9 @@ To delete a cluster:
 ```
 k3d cluster delete local-k8s
 ```
+then for the kubernetes dashboard run
+
+```
 
 kubectl get nodes
 
@@ -32,4 +35,4 @@ kubectl -n default port-forward dashboard-kong-68687498db-5jk5m 8443:8443
 kubectl -n default create token admin-user
 ```
 
-My plan is to use this for a course on monitoring and logging (with open telemetry).
+My plan is to use this for a course on monitoring and logging (with open telemetry). I already used it in test with the open [telemetry demo](https://opentelemetry.io/docs/demo/kubernetes-deployment/). I am thinking that students will expose their work with [cloudflare tunnels](https://github.com/STRRL/cloudflare-tunnel-ingress-controller).
