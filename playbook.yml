@@ -31,6 +31,11 @@
     args:
       creates: /usr/local/bin/kubectl
   - name: create cluster
-    ansible.builtin.command: k3d cluster create local-k8s
+    ansible.builtin.command: k3d cluster create local-k8s --volume '{{ lookup('ansible.builtin.env', 'PWD') }}'/storage:/var/storage
     args:
       creates: ~/.kube/config
+  - name: create persistent volume
+    kubernetes.core.k8s:
+      state: present
+      src: ./kube/persistent.yaml
+
