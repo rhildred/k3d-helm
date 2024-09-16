@@ -4,7 +4,7 @@ run kubernetes cluster in codespace
 TLDR;
 
 ```
-pip intall -r requirements.txt
+pip install -r requirements.txt
 ansible-playbook playbook.yml
 
 ```
