@@ -9,7 +9,14 @@ ansible-playbook playbook.yml
 
 ```
 
-To delete a cluster:
+I did struggle with actually seeing the service outside of the dev container. If the service port is 80 and you want to access on 8080, you can run:
+
+```
+kubectl port-forward svc/<what you called your service> 8080:80
+
+```
+
+To delete a cluster (and start over):
 
 ```
 k3d cluster delete local-k8s
